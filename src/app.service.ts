@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import db from '../prisma/test';
+import { PrismaService } from './prisma/prisma.service';
 
 @Injectable()
 export class AppService {
+  constructor(private readonly db: PrismaService) {}
+
   getHello(): string {
     return 'Hello World!123';
   }
@@ -19,7 +21,7 @@ export class AppService {
   }
 
   async getTitle() {
-    const title = await db.todo.findFirst({});
-    return { title };
+    const data = await this.db.todo.findFirst({});
+    return data.title;
   }
 }
