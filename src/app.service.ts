@@ -6,7 +6,7 @@ export class AppService {
   constructor(private readonly db: PrismaService) {}
 
   getHello(): string {
-    return 'Hello World!123';
+    return 'Hello World!1234';
   }
 
   getGoodBye(msg: string) {
@@ -22,7 +22,7 @@ export class AppService {
 
   async getTitle() {
     const data = await this.db.todo.findFirst({});
-    this.db.todo
+    this.db.todo;
     return data.title;
   }
 }
