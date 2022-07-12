@@ -22,6 +22,7 @@ export class AppService {
 
   async getTitle() {
     const data = await this.db.todo.findFirst({});
+    this.db.todo
     return data.title;
   }
 }

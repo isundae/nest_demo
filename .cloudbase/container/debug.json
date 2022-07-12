@@ -1,0 +1,11 @@
+{
+  "containers": [
+    {
+      "name": "nest_demo",
+      "domain": "",
+      "ip": "",
+      "mode": "compose"
+    }
+  ],
+  "config": {}
+}

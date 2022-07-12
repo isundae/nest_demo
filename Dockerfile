@@ -8,8 +8,12 @@ RUN npm install
 
 COPY . /app
 
+RUN npm run prebuild
+
 RUN npm run build
 
 RUN npx prisma generate
 
-CMD [ "npm","start" ]
+EXPOSE 3000
+
+CMD [ "node","dist/main" ]
