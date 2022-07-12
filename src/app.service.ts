@@ -6,7 +6,7 @@ export class AppService {
   constructor(private readonly db: PrismaService) {}
 
   getHello(): string {
-    return 'Hello World!1234';
+    return 'Hello World!12345';
   }
 
   getGoodBye(msg: string) {
